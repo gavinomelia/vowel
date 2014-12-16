@@ -5,6 +5,12 @@ defmodule Num do
     end
   end
 
+  def odd_count(list_of_numbers) do
+    Enum.count list_of_numbers, fn(each_number) -> 
+      rem(each_number, 2) == 1
+    end
+  end
+
   def even_numbers(list_of_numbers) do
     Enum.filter list_of_numbers, fn(each_number) -> 
       rem(each_number, 2) == 0

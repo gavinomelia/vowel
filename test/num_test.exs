@@ -8,7 +8,13 @@ defmodule NumTest do
    assert Num.even_count([1, 2, 8, 456, 8888, 15]) == 4
  end
 
- test "even_numbers" do
+ test "odd_count" do
+  assert Num.odd_count([2, 3, 3]) == 2
+  assert Num.odd_count([1, 2, 8]) == 1
+  assert Num.odd_count([1, 2, 8, 456, 8888, 15]) == 2
+end
+
+test "even_numbers" do
   assert Num.even_numbers([1, 3, 3]) == []
   assert Num.even_numbers([1, 2, 8]) == [2, 8]
   assert Num.even_numbers([1, 2, 8, 456, 8888, 15]) == [2, 8, 456, 8888]
